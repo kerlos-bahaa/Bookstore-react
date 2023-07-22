@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import BookList from "./components/bookList";
-import BookForm from "./components/bookform";
-import CategoriesPage from "./components/categories/CategoriesPage";
-import "./App.css";
+import React, { useState } from 'react';
+import {
+  BrowserRouter as Router, Routes, Route, Link,
+} from 'react-router-dom';
+import BookList from './components/bookList';
+import BookForm from './components/bookform';
+import CategoriesPage from './components/categories/CategoriesPage';
+import './App.css';
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -34,13 +36,13 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={
+            element={(
               <div>
                 <h1>My Book Collection</h1>
                 <BookList books={books} onDelete={handleDeleteBook} />
                 <BookForm onAdd={handleAddBook} />
               </div>
-            }
+            )}
           />
           <Route path="/categories" element={<CategoriesPage />} />
         </Routes>
