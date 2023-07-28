@@ -42,7 +42,7 @@ function App() {
                 <BookList books={books} onDelete={handleDeleteBook} />
                 <BookForm onAdd={handleAddBook} />
               </div>
-            )}
+          )}
           />
           <Route path="/categories" element={<CategoriesPage />} />
         </Routes>
